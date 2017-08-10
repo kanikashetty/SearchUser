@@ -1,0 +1,14 @@
+{% load rest_framework %}
+
+<html><body>
+
+<h1>USER</h1>
+
+<form action="{% url 'profile-detail' pk=profile.pk %}" method="POST">
+    {% csrf_token %}
+    <input type="text" name="name"/>
+    
+    <input type="submit" value="Search">
+</form>
+    
+</body></html>

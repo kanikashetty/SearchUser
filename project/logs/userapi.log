@@ -1,0 +1,17 @@
+INFO 2017-08-09 22:59:58,608 views views.py searchUser 42 GET request to list the stored users
+ERROR 2017-08-09 23:01:37,127 views views.py searchUser 45 JSON parse error - No JSON object could be decoded
+Traceback (most recent call last):
+  File "C:\Users\kanika\project\userapi\views.py", line 20, in searchUser
+    name = request.data.get('name')
+  File "C:\Python27\lib\site-packages\rest_framework\request.py", line 378, in __getattribute__
+    return super(Request, self).__getattribute__(attr)
+  File "C:\Python27\lib\site-packages\rest_framework\request.py", line 186, in data
+    self._load_data_and_files()
+  File "C:\Python27\lib\site-packages\rest_framework\request.py", line 246, in _load_data_and_files
+    self._data, self._files = self._parse()
+  File "C:\Python27\lib\site-packages\rest_framework\request.py", line 315, in _parse
+    parsed = parser.parse(stream, media_type, self.parser_context)
+  File "C:\Python27\lib\site-packages\rest_framework\parsers.py", line 67, in parse
+    raise ParseError('JSON parse error - %s' % six.text_type(exc))
+ParseError: JSON parse error - No JSON object could be decoded
+INFO 2017-08-09 23:01:58,022 views views.py searchUser 42 GET request to list the stored users
